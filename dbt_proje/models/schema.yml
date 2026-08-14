@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: stg_enerji
+    description: "Temizlenmiş ve dönüştürülmüş enerji verisi"
+    columns:
+      - name: datetime
+        description: "Tarih ve saat"
+        tests:
+          - not_null
+          - unique
+      - name: aktif_guc
+        description: "Aktif güç (kW)"
+        tests:
+          - not_null
+
+  - name: dim_zaman
+    description: "Zaman boyutu tablosu"
+    columns:
+      - name: datetime
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_lokasyon
+    description: "Lokasyon boyutu tablosu"
+    columns:
+      - name: lokasyon_id
+        tests:
+          - not_null
+          - unique
+
+  - name: fact_tuketim
+    description: "Tüketim gerçek tablosu"
+    columns:
+      - name: datetime
+        tests:
+          - not_null
+      - name: aktif_guc
+        tests:
+          - not_null

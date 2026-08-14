@@ -1,0 +1,21 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Veri ve model çıktıları (yerel/büyük dosyalar)
+ham_veri/
+temiz_veri/
+*.duckdb
+model/
+mlruns/
+logs/
+
+# dbt
+dbt_proje/target/
+dbt_proje/logs/
+dbt_proje/.user.yml
+
+# OS
+.DS_Store

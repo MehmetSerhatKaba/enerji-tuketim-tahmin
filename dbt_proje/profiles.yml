@@ -1,0 +1,7 @@
+dbt_proje:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../veri_ambari.duckdb
+      threads: 4
